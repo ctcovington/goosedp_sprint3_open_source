@@ -3,6 +3,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import Step1_Archetype_Counting.analytic_gaussian as ag
 from Step1_Archetype_Counting.archetype_company_counts import get_private_counts
 from Step2_sample_triplets.sample_triplets import sample_triplets
 from Step3_nonprivate_gen.post_col_generation import post_col_generation

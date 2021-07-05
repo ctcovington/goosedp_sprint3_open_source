@@ -6,7 +6,8 @@ import re
 import json
 import pathlib
 import pickle 
-from sklearn.preprocessing import StandardScaler
+# import analytic_gaussian as ag
+import Step1_Archetype_Counting.analytic_gaussian as ag
 
 
 def get_private_counts(priv_data_path, parameters_path, archetype_path, private_counts_dir, epsilon, delta, archetype_budget_prop):
@@ -15,15 +16,13 @@ def get_private_counts(priv_data_path, parameters_path, archetype_path, private_
     company_budget_prop = 1 - archetype_budget_prop
 
     # NOTE: assuming basic composition
-    local_epsilon = min(epsilon, 0.9999999999) # NOTE: we ensure that epsilon < 1 because our parameterization of the Gaussian mechanism requires it
-
-    archetype_epsilon = local_epsilon*archetype_budget_prop
+    archetype_epsilon = epsilon*archetype_budget_prop
     archetype_delta = delta*archetype_budget_prop
-    company_epsilon = local_epsilon*company_budget_prop
+    company_epsilon = epsilon*company_budget_prop
     company_delta = delta*company_budget_prop
 
-    archetype_sigma = sens*np.sqrt(2. * np.log(1.25 / archetype_delta)) / archetype_epsilon
-    company_sigma = sens*np.sqrt(2. * np.log(1.25 / company_delta)) / company_epsilon
+    archetype_sigma = ag.calibrateAnalyticGaussianMechanism(archetype_epsilon, archetype_delta, sens, tol = 1.e-12)
+    company_sigma = ag.calibrateAnalyticGaussianMechanism(company_epsilon, company_delta, sens, tol = 1.e-12)
 
 
     '''load archetype histograms'''
