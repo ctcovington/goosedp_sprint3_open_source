@@ -1,7 +1,6 @@
 data/ground_truth.csv
 data/public_data.csv
 Step1_Archetype_Counting/*.csv 
-Step2_sample_triplets/*.csv
-Step3_nonprivate_gen/*.csv
+Step2_Synthetic_Data_Generation/*.csv
 submission.csv
 **/__pycache__
