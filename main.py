@@ -5,8 +5,8 @@ import numpy as np
 import pandas as pd
 import Step1_Archetype_Counting.analytic_gaussian as ag
 from Step1_Archetype_Counting.archetype_company_counts import get_private_counts
-from Step2_sample_triplets.sample_triplets import sample_triplets
-from Step3_nonprivate_gen.post_col_generation import post_col_generation
+from Step2_ Synthetic_Data_Generation.sample_triplets import sample_triplets
+from Step2_ Synthetic_Data_Generation.post_col_generation import post_col_generation
 
 ROOT_DIRECTORY = Path("./")
 RUNTIME_DIRECTORY = ROOT_DIRECTORY / "submission"
@@ -15,8 +15,8 @@ DATA_DIRECTORY = ROOT_DIRECTORY / "data"
 DEFAULT_GROUND_TRUTH = DATA_DIRECTORY / "ground_truth.csv"
 DEFAULT_ARCHETYPES = ROOT_DIRECTORY / "Step0_Archetype_Generation" / "Results_GMM" / "Results_10"
 DEFAULT_PRIVATE_COUNTS = ROOT_DIRECTORY / "Step1_Archetype_Counting"
-DEFAULT_TRIPLETS = ROOT_DIRECTORY / "Step2_sample_triplets"
-DEFAULT_SAMPLING = ROOT_DIRECTORY / "Step3_nonprivate_gen"
+DEFAULT_TRIPLETS = ROOT_DIRECTORY / "Step2_ Synthetic_Data_Generation"
+DEFAULT_SAMPLING = ROOT_DIRECTORY / "Step2_ Synthetic_Data_Generation"
 DEFAULT_PUBLIC_DATA = DATA_DIRECTORY / "public_data.csv"
 DEFAULT_PARAMS = DATA_DIRECTORY / "parameters.json"
 DEFAULT_OUTPUT = ROOT_DIRECTORY / "submission.csv"
