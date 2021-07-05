@@ -157,5 +157,5 @@ def sample_triplets(parameters_path, archetype_path, private_count_path, triplet
     # save sampled dataset as csv file
     sampled_data_df.to_csv(os.path.join(triplets_dir, f'sampled_triplet_{epsilon}.csv'), index = False)
 
-    print("Sampling triplets finished: eps = {epsilon}")
+    print(f'Sampling triplets finished: eps = {epsilon}')
 
