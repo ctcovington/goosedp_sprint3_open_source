@@ -1,1 +1,2 @@
-./data/*.csv
+data/ground_truth.csv
+data/public_data.csv
