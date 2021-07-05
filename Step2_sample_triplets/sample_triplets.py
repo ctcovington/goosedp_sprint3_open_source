@@ -5,6 +5,11 @@ import json
 import random
 import numpy as np
 
+
+'''
+Function to read the archetype file.
+
+'''
 def open_archetype_file(filename):
     with open(filename, 'r') as archetype:
         read_archetype = []
@@ -15,20 +20,36 @@ def open_archetype_file(filename):
             read_archetype.append(list(map(float, line)))
     return read_archetype
 
+'''
+Step 2 - Sample triplets
 
+Arguments:
+    parameters_path : path to the "parameters.json" file;
+    archetype_path : path to the directory storing archetype files;
+    private_count_path : path to the directory storing private counts files of company ID;
+    triplets_dir : path to store intermediate file(s) (output of this step);
+    epsilon : the privacy budget used in the current iteration.
+
+Output:
+    intermediate file(s) for synthesization results of columns ("taxi_id", "company_id", "shift", "pickup_community_area", and "dropoff_community_area").
+
+'''
 def sample_triplets(parameters_path, archetype_path, private_count_path, triplets_dir, epsilon):
-    # read archetypes from file
+
+    # get archetype filenames
     archetype_files = glob.glob(os.path.join(archetype_path, 'archetype_*.txt'))
 
+    # read archetypes from file
     archetypes = {}
     for file_index in range(0, len(archetype_files)):
         archetypes[file_index] = open_archetype_file(archetype_files[file_index])
 
 
-    # read company_id domain from parameters.json
+    # load "parameters.json" file
     with open(parameters_path, 'r') as f:
         parameters = json.load(f)
 
+    # read company_id domain from "parameters.json" file
     company_id_domain = parameters['schema']['company_id']['values']
 
     # initialize data
@@ -43,12 +64,15 @@ def sample_triplets(parameters_path, archetype_path, private_count_path, triplet
         triplets from the 3-way marginal;
     ''' 
     archetype_data_list = []
+    # read maximum no. of sampling records from "parameters.json" file
     max_records = parameters['runs']['epsilon' == epsilon]['max_records']
     overall_size = min(max_records, 2_000_000)
+    # read maximum no. of records per taxi from "parameters.json" file
     max_rides_by_taxi = parameters['runs']['epsilon' == epsilon]['max_records_per_individual']
-    first_taxi_id = parameters['schema']['taxi_id']['min'] # TODO: Need to get from parameters.json
+    # read the starting taxi_id from "parameters.json" file
+    first_taxi_id = parameters['schema']['taxi_id']['min']
 
-    print("Sampling triplets and company_id")
+    print("Start sampling triplets and company_id...")
 
     three_way_marginal_public = pd.read_csv(os.path.join(archetype_path, f'archetype_marginals.csv'))
 
