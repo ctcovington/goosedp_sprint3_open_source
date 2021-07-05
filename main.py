@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from Step1_Archetype_Counting.archetype_company_counts import get_private_counts
 from Step2_sample_triplets.sample_triplets import sample_triplets
-from Step3_nonprivate_gen.cc_post_col_generation import post_col_generation
+from Step3_nonprivate_gen.post_col_generation import post_col_generation
 
 ROOT_DIRECTORY = Path("./")
 RUNTIME_DIRECTORY = ROOT_DIRECTORY / "submission"

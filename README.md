@@ -4,10 +4,10 @@ We are team GooseDP3 from the University of Waterloo, and this is our code submi
 
 ## Submission Repository Structure
     ├── Submission directory/
-    │   ├── Archetype_Generation/     		*Step-0: Preprocessing
+    │   ├── Step0_Archetype_Generation/     		*Step-0: Preprocessing
     |       ├── Results_GMM/
     |       └── k_archetypes.py 
-    │   ├── Archetype_Counting/       		*Step-1: Private Analysis
+    │   ├── Step1_Archetype_Counting/       		*Step-1: Private Analysis
     |       └── archetype_company_counts.py    
     │   ├── Step2_sample_triplets/    		*Step-2: Synthetic Record Generation
     |       └── sample_triplets.py
@@ -16,12 +16,9 @@ We are team GooseDP3 from the University of Waterloo, and this is our code submi
     |   ├── data/					  		*Ground Truth Data and Parameters File
     |       ├── parameters.json
     |       └── ground_truth.csv
-    |   ├── main.py					  		*Program Entrence
-    |   ├── create_submission.sh      		*Submission Zipping Script
+    |   ├── main.py					  		
     |   ├── requirements.txt      			*Runtime Requirements
-    |   ├── (submission.csv)      			*(Generated) Synthetic Dataset
     |   ├── (Submission Write-up)
-    |   └── goose_eligibility_form.pdf
 
 ## Run Submission
 If you want to run our submission manually, first put the ground truth dataset (`ground_truth.csv` file) under the `data/`directory, and run the command.
