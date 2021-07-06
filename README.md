@@ -5,7 +5,8 @@ TaxiTrip-Synthesizer
 -----
 
 ## Brief Introduction
-We are team GooseDP from the University of Waterloo. We finished the 5th in the [NIST Temporal Map Challenge: **Sprint 3**](https://www.drivendata.co/blog/differential-privacy-winners-sprint3/). This repository is our open-sourced solution to the challenge. The diagram below illustrates a summary of our approach and for full details we refer to the technical report in this repository (`NIST_DP_Privacy_Writeup_Sprint_3_Final.pdf`)![Overall_Approach](./Overall_Approach.png)
+We are team GooseDP from the University of Waterloo. We finished the 5th in the [NIST Temporal Map Challenge: **Sprint 3**](https://www.drivendata.co/blog/differential-privacy-winners-sprint3/). This repository is our open-sourced solution to the challenge. The diagram below illustrates a summary of our approach and for full details we refer to the technical report in this repository ([`NIST_DP_Privacy_GooseDP_Writeup.pdf`](https://github.com/ctcovington/goosedp_sprint3_open_source/blob/main/NIST_DP_Privacy_GooseDP_Writeup.pdf)). If anyone wants to generalize this approach to datasets in other domains, we have some suggested guidelines located here ([`Approach_to_Generalization.pdf`](https://github.com/ctcovington/goosedp_sprint3_open_source/blob/main/Approach_to_Generalization.pdf)).
+![Overall_Approach](./Overall_Approach.png)
 
 ## Submission Repository Structure
     ├── Submission directory/
@@ -22,8 +23,8 @@ We are team GooseDP from the University of Waterloo. We finished the 5th in the 
     |       └── ground_truth.csv
     |   ├── main.py                                 *Program Entrance
     |   ├── requirements.txt                        *Package Requirements
-    |   ├── (Submission Write-up)
-    |   └── (Approach to Generalization Doc)
+    |   ├── NIST_DP_Privacy_GooseDP_Writeup.pdf     *Technical Report
+    |   └── Approach_to_Generalization.pdf          *Generalization Guidance
 
 ## Execution Commands
 If you want to run our submission manually, first put the ground truth dataset (`ground_truth.csv` file) under the `data/`directory, and install the required packages.
