@@ -1,6 +1,11 @@
-# GooseDP Solution to Differential Privacy Temporal Map Challenge (DeID2)-Sprint 3
+TaxiTrip-Synthesizer
+==
+***Team GooseDP Solution to Differential Privacy Temporal Map Challenge (DeID2)-Sprint 3***
+
+-----
+
 ## Brief Introduction
-We are team GooseDP from the University of Waterloo. We finished the 5th in the [NIST Temporal Map Challenge: **Sprint 3**](https://www.drivendata.co/blog/differential-privacy-winners-sprint3/). This repository is our open-sourced solution to the challenge.![Overall_Approach](./Overall_Approach.png)
+We are team GooseDP from the University of Waterloo. We finished the 5th in the [NIST Temporal Map Challenge: **Sprint 3**](https://www.drivendata.co/blog/differential-privacy-winners-sprint3/). This repository is our open-sourced solution to the challenge. The diagram below illustrates a summary of our approach and for full details we refer to the technical report in this repository (`NIST_DP_Privacy_Writeup_Sprint_3_Final.pdf`)![Overall_Approach](./Overall_Approach.png)
 
 ## Submission Repository Structure
     ├── Submission directory/
@@ -18,6 +23,7 @@ We are team GooseDP from the University of Waterloo. We finished the 5th in the 
     |   ├── main.py                                 *Program Entrance
     |   ├── requirements.txt                        *Package Requirements
     |   ├── (Submission Write-up)
+    |   └── (Approach to Generalization Doc)
 
 ## Execution Commands
 If you want to run our submission manually, first put the ground truth dataset (`ground_truth.csv` file) under the `data/`directory, and install the required packages.
@@ -49,6 +55,20 @@ Under this directory, the file `sample_triplets.py` is used for generating synth
 **Synthesize Other Columns**  (`post_col_generation.py`) <br>
 The post processing step in the write-up is corresponding to the contents in the `Step3_nonprivate_gen/`directory. <br>
 Under this directory, the file `cc_post_col_generation.py` is used for generating synthetic records for the rest of the columns, i.e., `('fare', 'trip_miles', 'trip_seconds', 'tips', 'trip_total', 'payment_type')`, based on the k-marginals. <br>
+
+## How to Cite: 
+
+> ```
+> @misc{GooseDP_Syn,
+>   author = {Covington, Christian and Knopf, Karl and Mohapatra, Shubhankar and Zhang, Shufan},
+>   title = {TaxiTrip-Synthesizer: Team GooseDP Solution to Differential Privacy Temporal Map Challenge (DeID2)-Sprint 3},
+>   year = {2021},
+>   publisher = {GitHub},
+>   journal = {GitHub repository},
+>   howpublished = {\url{https://github.com/ctcovington/goosedp_sprint3_open_source}}
+> }
+> ```
+
 
 ## Team Members: 
 [Christian Covington](mailto:ccovington@uwaterloo.ca) <br>
