@@ -53,10 +53,10 @@ Under this directory, the file `archetype_company_counts.py` is used for creatin
 **Synthesize Taxi-trips Record** (`sample_triplets.py`) <br>
 The synthetic record step in the write-up is corresponding to the contents in the `Step2_sample_triplets/`directory. <br>
 Under this directory, the file `sample_triplets.py` is used for generating synthetic records for `('taxi_id', 'shift', 'company_id', 'pickup_community_area', 'dropoff_community_area')` columns. <br>
-*Note:* We provide a bunch of method for sampling (`tr_mode` from 1-4), but we only use the mode 4, the one described in the write-up, for final submission. <br>
+
 **Synthesize Other Columns**  (`post_col_generation.py`) <br>
 The post processing step in the write-up is corresponding to the contents in the `Step3_nonprivate_gen/`directory. <br>
-Under this directory, the file `cc_post_col_generation.py` is used for generating synthetic records for the rest of the columns, i.e., `('fare', 'trip_miles', 'trip_seconds', 'tips', 'trip_total', 'payment_type')`, based on the k-marginals. <br>
+Under this directory, the file `post_col_generation.py` is used for generating synthetic records for the rest of the columns, i.e., `('fare', 'trip_miles', 'trip_seconds', 'tips', 'trip_total', 'payment_type')`, based on the k-marginals. <br>
 
 ## How to Cite: 
 
