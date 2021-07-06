@@ -20,14 +20,15 @@ We are team GooseDP from the University of Waterloo. We finished the 5th in the 
     |       └── post_col_generation.py
     |   ├── data/                                   *Ground Truth Data and Parameters File
     |       ├── parameters.json
-    |       └── ground_truth.csv
+    |       ├── (public_data.csv)                   *Public Dataset
+    |       └── (ground_truth.csv)                  *Private Dataset
     |   ├── main.py                                 *Program Entrance
     |   ├── requirements.txt                        *Package Requirements
     |   ├── NIST_DP_Privacy_GooseDP_Writeup.pdf     *Technical Report
     |   └── Approach_to_Generalization.pdf          *Generalization Guidance
 
 ## Execution Commands
-If you want to run our submission manually, first put the ground truth dataset (`ground_truth.csv` file) under the `data/`directory, and install the required packages.
+If you want to run our submission manually, first put the ground truth dataset (`ground_truth.csv` file) and the public dataset (`public_data.csv` file) under the `data/`directory, and install the required packages.
 
 >`pip install -r requirements.txt`
 
