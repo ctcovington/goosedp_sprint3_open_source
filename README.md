@@ -28,7 +28,7 @@ We are team GooseDP from the University of Waterloo. We finished the 5th in the 
     |   └── Approach_to_Generalization.pdf          *Generalization Guidance
 
 ## Execution Commands
-If you want to run our submission manually, first put the ground truth dataset (`ground_truth.csv` file) and the public dataset (`public_data.csv` file) under the `data/`directory, and install the required packages.
+If you want to run our submission manually, first put the private dataset (`ground_truth.csv` file) and the public dataset (`public_data.csv` file) under the `data/`directory, and install the required packages.
 
 >`pip install -r requirements.txt`
 
@@ -48,7 +48,7 @@ Under this directory, the file `k_archetypes.py` is used for archetype generatio
 The private analysis step in the write-up is corresponding to the contents in the `Archetype_Counting/`directory. <br>
 Under this directory, the file `archetype_company_counts.py` is used for creating private histograms over the private dataset (details referring to the write-up) and returning privatized counts of taxis and companies. <br><br>
 
-**Step-2:  Synthetic Data Generation**  (`Step2_sample_triplets/`)  <br>
+**Step 2:  Synthetic Data Generation**  (`Step2_sample_triplets/`)  <br>
 
 **Synthesize Taxi-trips Record** (`sample_triplets.py`) <br>
 The synthetic record step in the write-up is corresponding to the contents in the `Step2_sample_triplets/`directory. <br>
